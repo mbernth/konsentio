@@ -1,0 +1,305 @@
+/* # Icomoon SVG styles
+---------------------------------------------------------------------------------------------------- */
+.icon-minus22 {
+	width: 20px;
+	height: 20px;
+}
+.icon-plus22 {
+	width: 20px;
+	height: 20px;
+}
+
+/* # Structure
+---------------------------------------------------------------------------------------------------- */
+html {
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 26px;
+    line-height: 2.6rem;
+    color: #333;
+    background: linear-gradient(145deg, rgba(232, 242, 246, 0.75) 0%, rgba(125, 185, 232, 0) 75%);
+}
+h2{
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 1em;
+    margin: 0;
+    color: #1c84a4;
+}
+a{
+    color: #1c84a4;
+    text-decoration: none;
+}
+a:hover,
+a:active;
+a:focus{
+    font-weight: 400;
+}
+.site-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80px;
+    padding: 20px;
+}
+header h1{
+    height: 0;
+    width: 0;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+    text-indent: -999em;
+}
+#konsentio-logo{
+    width: 150px;
+    height: 40px;
+}
+main{
+    position: relative;
+    height: calc(100vh - 120px);
+}
+.images{
+    position: relative;
+    display: block;
+    height: calc(50vh - 120px);
+    background: #ccc;
+}
+.images img{
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+img.big{
+    float: left;
+    height: calc(50vh - 120px);
+    width: 70vw;
+}
+img.small{
+    float: left;
+    height: calc(25vh - 60px);
+    width: 30vw;
+}
+.contact{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 50vh;
+}
+
+footer{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    font-weight: 500;
+    font-size: 10px;
+    font-size: 1.0rem;
+    line-height: 20px;
+    line-height: 2rem;
+    padding: 20px;
+    width: 100%;
+}
+
+/* # Accordion
+---------------------------------------------------------------------------------------------------- */
+.accordion{
+    width: 100%;
+}
+
+.accordion svg{
+    fill: #1c84a4;
+}
+.accordion h2{
+    display: flex;
+    justify-content: space-between;
+}
+.one{
+    margin-bottom: 20px;
+}
+.closed h2{
+    cursor: pointer;
+}
+.icon-minus22{
+    display: inline-block;
+}
+.icon-plus22{
+    display: none;
+}
+.closed .icon-minus22{
+    display: none;
+}
+.closed .icon-plus22{
+    display: inline-block;
+}
+h2{
+    font-size: 24px;
+}
+.closed h2{
+    font-size: 18px;
+}
+
+.accordion div div{
+    height: 100%;
+    overflow: hidden;
+}
+.accordion div.closed div{
+    height: 0;
+    overflow: hidden;
+}
+
+@media screen and (orientation: landscape) and (max-width: 1023px){
+    .images,
+    header,
+    footer {
+      display: none;
+    }
+    main,
+    .contact{
+        height: 100vh;
+    }
+}
+
+@media only screen and (min-width: 767px) {
+    body{
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 28px;
+        line-height: 2.8rem;
+    }
+    h2,
+    .closed h2{
+        font-size: 32px;
+        font-size: 3.2rem;
+    }
+    header{
+        position: absolute;
+        height: 110px;
+        padding: 40px;
+    }
+    #konsentio-logo{
+        width: 250px;
+        height: 70px;
+    }
+    main{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+    .images{
+        position: relative;
+        height: 100vh;
+        width: 50vw;
+        background: #ccc;
+        order:2;
+    }
+    img.big{
+        float: left;
+        height: 33.3333vh;
+        width: 50vw;
+    }
+    img.small{
+        float: left;
+        height: 33.3333vh;
+        width: 50vw;
+    }
+    .contact{
+        position: relative;
+        padding-left: 40px;
+        height: calc(100vh - 150px);
+        margin-top: 110px;
+        width: 50vw;
+        order:1;
+    }
+    .one{
+        margin-bottom: 60px;
+    }
+    .closed h2{
+        cursor: none;
+    }
+
+    .icon-plus22,
+    .closed .icon-plus22,
+    .icon-minus22,
+    .closed .icon-minus22{
+        display: none;
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+    }
+    .accordion div div,
+    .accordion div.closed div{
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (orientation: landscape) and (min-width: 767px) and (max-height: 450px){
+    .contact{
+        margin-top: 0;
+        width: 100%;
+        height: 100vh;;
+    }
+    .accordion{
+        display: flex;
+    }
+    .one, .two{
+        width: 50%;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .images{
+        width: 60vw;
+    }
+    .contact{
+        width: 40vw;
+    }
+    img.big{
+        height: 65vh;
+        width: 60vw;
+    }
+    img.small{
+        float: left;
+        height: 35vh;
+        width: 30vw;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    
+    body{
+        font-size: 20px;
+        font-size: 2em;
+        line-height: 30px;
+        line-height: 3rem;
+    }
+    h2,
+    .closed h2{
+        font-size: 48px;
+        font-size: 4.8rem;
+    }
+}
